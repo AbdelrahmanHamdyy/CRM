@@ -1,0 +1,20 @@
+Ribbon Customization:
+https://www.google.com/search?q=Ribbon+customization+dynamics+365&rlz=1C1SQJL_enEG943EG943&oq=Ribbon+customization+dynamics+365&aqs=chrome..69i57.14070j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:76b47686,vid:HXvvXdyEqxQ
+
+TO import the Ribbon workbench Icon and Create a Solution:
+https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/export-prepare-edit-import-ribbon
+
+Business Process Flow:
+https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/business-process-flows-overview?view=op-9-1
+
+Business Rules:
+https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1
+
+Views:
+https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-views?view=op-9-1
+
+Categorized Search:
+https://learn.microsoft.com/en-us/dynamics365/industry/healthcare/configure-categorized-search
+
+
+
