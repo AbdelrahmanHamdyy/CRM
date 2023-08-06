@@ -63,12 +63,18 @@ CompanyScript = {
     formContext.getControl("Employees").addOnLoad(onLoadFunc);
   },
 
-  addEmployee(context) {
+  addEmployee() {
+    debugger;
+    var companyName = Xrm.Page.getAttribute("new_name").getValue();
+    var companyId = Xrm.Page.data.entity.getId();
     var entityFormOptions = {};
 
     entityFormOptions["entityName"] = "new_employee";
+    entityFormOptions["openInNewWindow"] = true;
 
     var formParameters = {};
+    formParameters["new_companyname"] = companyId;
+    formParameters["new_companynamename"] = companyName;
 
     Xrm.Navigation.openForm(entityFormOptions, formParameters);
   },
