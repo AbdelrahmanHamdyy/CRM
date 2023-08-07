@@ -1,0 +1,22 @@
+-Dashboard Components #:
+ https://cargas.com/blog/now-you-can-have-more-than-6-dashboard-components/
+
+
+-Create cases for activities associated with a resolved case:
+ https://learn.microsoft.com/en-us/dynamics365/customer-service/automatically-create-case-from-email
+
+-the file (Ahmed Sayed) contains the Correct Answer about the difference between administrtator and the manager.
+
+
+-Diferrence between the 2 types of Access teams(User-Created , Auto-Created):
+https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-access-teams-owner-teams-collaborate-share-information?view=op-9-1
+
+-I asked about the steps (not only the definition)to create an iframe into a Dashboard not in the form, please the correct Ans from screen shot i shared
+
+-There are 4 ScreenShots from(AbdelAziz) about (Interactive Dashboard, Azure ID, BU Devision, Iframes, Tableau) are brief to each Definition 
+
+-There are 2 screenshots from (ziad and Abdelrahaman) about (Access Team).
+
+
+
+
