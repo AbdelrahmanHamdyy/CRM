@@ -24,28 +24,26 @@ namespace UpdateEmployees
 
             string relatedEntityName = "new_employee";
 
-            Entity companyRecord = service.Retrieve(primaryEntityName, primaryRecordId, new ColumnSet("new_name"));
-            string companyName = companyRecord.GetAttributeValue<string>("new_name");
+            Entity companyRecord = service.Retrieve(primaryEntityName, primaryRecordId, new ColumnSet("new_email"));
+            Guid companyId = companyRecord.GetAttributeValue<Guid>("new_companyid");
             string companyEmail = companyRecord.GetAttributeValue<string>("new_email");
 
             ConditionExpression condition = new ConditionExpression();
             condition.AttributeName = "new_companyname";
             condition.Operator = ConditionOperator.Equal;
-            condition.Values.Add(companyName);
+            condition.Values.Add(companyId);
 
             FilterExpression filter = new FilterExpression();
             filter.Conditions.Add(condition);
 
             QueryExpression query = new QueryExpression(relatedEntityName);
-            query.ColumnSet.AddColumns("new_name", "new_companyname", "new_companyemail");
+            query.ColumnSet.AddColumns("new_companyemail");
             query.Criteria.AddFilter(filter);
 
             EntityCollection employees = service.RetrieveMultiple(query);
 
-            int count = employees.TotalRecordCount;
-
-            for (int i = 0; i < count; i++) {
-                Guid employeeId = employees[i].GetAttributeValue<Guid>("new_employeeid");
+            foreach (Entity employee in employees.Entities) {
+                Guid employeeId = employee.GetAttributeValue<Guid>("new_employeeid");
                 Entity updatedEmployee = new Entity(relatedEntityName, employeeId);
                 updatedEmployee["new_companyemail"] = companyEmail;
                 service.Update(updatedEmployee);
