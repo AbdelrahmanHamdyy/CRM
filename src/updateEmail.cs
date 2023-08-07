@@ -37,7 +37,7 @@ namespace UpdateEmployees
             filter.Conditions.Add(condition);
 
             QueryExpression query = new QueryExpression(relatedEntityName);
-            query.ColumnSet.AddColumns("new_companyemail");
+            query.ColumnSet.AddColumns("new_name", "new_companyname", "new_companyemail");
             query.Criteria.AddFilter(filter);
 
             EntityCollection employees = service.RetrieveMultiple(query);
