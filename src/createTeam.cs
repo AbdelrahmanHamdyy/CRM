@@ -37,15 +37,16 @@ namespace Team
                 // Add myself as a member to this newly created team
                 Guid userId = new Guid("D2D9C4EE-862D-EE11-BDF4-00224884F6FB");
                 Guid[] members = new[] { userId };
-                AddMembersTeamRequest addRequest = new AddMembersTeamRequest();
-                addRequest.TeamId = teamId;
-                addRequest.MemberIds = members;
+                AddMembersTeamRequest addRequest = new AddMembersTeamRequest
+                {
+                    TeamId = teamId,
+                    MemberIds = members
+                };
                 service.Execute(addRequest);
 
                 // Add Security Role to the team
                 Guid securityRoleId = new Guid("9FDCFB69-1B36-EE11-BDF4-002248829BD5");
                 service.Associate("team", teamId, new Relationship("teamroles_association"), new EntityReferenceCollection() { new EntityReference("role", securityRoleId) });
-
             } catch(Exception ex) {
                 tracingService.Trace("Exception: " + ex.Message);
             }
