@@ -23,10 +23,12 @@ namespace Team
 
                 tracingService.Trace("Account Name: " + accountName);
 
+                string businessUnitId = "63D1C4EE-862D-EE11-BDF4-00224884F6FB";
+
                 Entity team = new Entity("team");
                 team["name"] = accountName;
                 team["teamtype"] = new OptionSetValue(0); // Owner Team
-                team["businessunitid"] = new EntityReference("businessunit", new Guid("63D1C4EE-862D-EE11-BDF4-00224884F6FB"));
+                team["businessunitid"] = new EntityReference("businessunit", new Guid(businessUnitId));
                 
                 Guid teamId = service.Create(team);
                 tracingService.Trace("Team Id: " + teamId);
